@@ -15,7 +15,7 @@ defmodule Identicon do
     hash = :crypto.hash(:md5, input)
     |> :binary.bin_to_list
 
-    %Identicon.Image{hex: hash}
+    %Identicon.Image{ hex: hash }
   end
 
   def pick_color(%Identicon.Image{hex: [r, g, b | _tail]} = image) do
